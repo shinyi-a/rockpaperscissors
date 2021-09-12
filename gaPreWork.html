@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+    <html>
+        <head>
+            <meta charset="utf-8">
+            <title>Lapis, Papyrus, Scalpellus</title>
+            <link rel="stylesheet" href="gaPreWork.css" type="text/css">
+            <link rel="icon" href="pixelMoth.ico">
+            <link rel="preconnect" href="https://fonts.googleapis.com">
+            <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+            <link href="https://fonts.googleapis.com/css2?family=IM+Fell+English+SC&family=Philosopher&display=swap" rel="stylesheet">
+        </head>
+
+    <body>
+
+        <header>
+            <!-- <img class="oldPaper" src="old-paper-texture.png"> -->
+            <div class="gameRules">
+                <p>Welcome to the game of Lapis, Papyrus, Scalpellus!</p>
+                <p>The game rules are as follows:
+                <ol>
+                    <li>Scalpellus ✂ beats Papyrus ▤</li>
+                    <li>Papyrus ▤ beats Lapis ☁</li>
+                    <li>Lapis ☁ beats Scalpellus ✂</li>
+                    <li>Same selection results in a tie</li>
+                </ol>
+                </p>
+            </div>
+        </header>
+
+            <div class="gameBody">
+                <p>To play, select either Lapis, Papyrus, Scalpellus below.</p>
+            
+                <div class="buttons">
+                    <button onclick="rockSelected()" id="rock" title="Lapis"><br><br><br><br><br>Lapis</button>
+                    <button onclick="paperSelected()" id="paper" title="Papyrus"><br><br><br><br><br>Papyrus</button>
+                    <button onclick="scissorsSelected()" id="scissors" title="Scalpellus"><br><br><br><br><br>Scalpellus</button>
+                </div>
+
+                <div class="tabledCounter">
+                    <table>
+                        <tr>
+                            <th class="highlightWinner">User Wins</th>
+                            <th class="highlightLoser">AI Wins</th>
+                            <th class="highlightTie">Tie</th>
+                        </tr>
+                        <tr>
+                            <th class="highlightWinner"><span id="userWins">0</span></th>
+                            <th class="highlightLoser"><span id="aiWins">0</span></th>
+                            <th class="highlightTie"><span id="tie">0</span></th>
+                        </tr>
+                    </table>
+                </div>
+
+                    <button id="refreshButton" onclick="refreshCounter()" title="Refresh">
+                        <p id="refreshButtonText">Refresh Counter</p>
+                    </button>
+            </div>
+
+            <div id="gameResults">
+                <p id="displayResults">You win!</p>
+                <p>You choose <span id="playerResult">this</span>, computer choose <span id="aiResult">this</span>.</p>
+            </div>
+
+            <!-- <div id="tryAgainButton"> -->
+                <div id="tryAgainButton" onclick="tryAgain()" title="Try Again">
+                    <p id="tryAgainText">Try Again</p>
+                </div>
+    </body>
+
+    <script type="text/javascript" src="gaPreWork.js">
+        //javascript here
+    </script>
+</html>
